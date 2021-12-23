@@ -1,0 +1,18 @@
+CREATE TABLE `user` (
+  `id` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+CREATE TABLE `gallery_board` (
+  `idx` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(500) DEFAULT NULL,
+  `writer` varchar(100) DEFAULT NULL,
+  `views` int NOT NULL DEFAULT '0',
+  `text` varchar(5000) DEFAULT NULL,
+  `comment` int NOT NULL DEFAULT '0',
+  `picture` varchar(200) DEFAULT NULL,
+  `dt` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`idx`)
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
